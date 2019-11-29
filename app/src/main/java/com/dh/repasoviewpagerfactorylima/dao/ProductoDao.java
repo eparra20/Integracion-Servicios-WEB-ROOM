@@ -26,7 +26,7 @@ public class ProductoDao {
     }
 
     public void obtenerResultadoDao(final ResultListener<ContenedorProducto> escuchadorDelControler){
-        Call<ContenedorProducto> callProductos = productoService.getCallService("autos");
+        Call<ContenedorProducto> callProductos = productoService.getCallService("gatitos");
 
         callProductos.enqueue(new Callback<ContenedorProducto>() {
             @Override
