@@ -17,6 +17,9 @@ public interface RoomProductoDao {
     @Insert
     void insert(Producto... producto);
 
+    @Insert
+    void insert(List<Producto> productoList);
+
     @Query("DELETE FROM PRODUCTO")
     void delete();
 }
