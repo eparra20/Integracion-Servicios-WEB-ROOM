@@ -1,11 +1,18 @@
 package com.dh.repasoviewpagerfactorylima.modelo;
 
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+
 import java.io.Serializable;
 
+@Entity
 public class Producto implements Serializable {
 
+    @ColumnInfo(name = "title")
     private String title;
+    @ColumnInfo(name = "thumbnail")
     private String thumbnail;
+    @ColumnInfo(name = "price")
     private String price;
 
     public Producto(String title, String thumbnail, String price) {
