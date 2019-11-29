@@ -4,12 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.room.Room;
 import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
 import android.widget.Toast;
 
 import com.dh.repasoviewpagerfactorylima.R;
+import com.dh.repasoviewpagerfactorylima.config.AppDatabase;
 import com.dh.repasoviewpagerfactorylima.controlador.ProductoController;
 import com.dh.repasoviewpagerfactorylima.modelo.ContenedorProducto;
 import com.dh.repasoviewpagerfactorylima.modelo.Producto;
@@ -44,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
                 miRecyclerViewAdapter.actualizarLista(listaProductos);
             }
         });
+
 
     }
 }
