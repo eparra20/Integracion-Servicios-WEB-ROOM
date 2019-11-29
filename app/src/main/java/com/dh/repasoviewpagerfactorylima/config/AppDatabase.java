@@ -9,12 +9,9 @@ import androidx.room.RoomDatabase;
 import com.dh.repasoviewpagerfactorylima.dao.RoomProductoDao;
 import com.dh.repasoviewpagerfactorylima.modelo.Producto;
 
-@Database(version = 1,entities = {Producto.class})
+@Database(version = 1,entities = {Producto.class},exportSchema = false)
 public abstract class AppDatabase extends RoomDatabase {
     public abstract RoomProductoDao roomProductoDao();
-
-    private AppDatabase() {
-    }
 
     private static AppDatabase INSTANCE = null;
 

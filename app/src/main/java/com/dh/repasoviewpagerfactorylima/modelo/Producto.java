@@ -2,7 +2,10 @@ package com.dh.repasoviewpagerfactorylima.modelo;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
+import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
+
+import com.google.gson.annotations.SerializedName;
 
 import java.io.Serializable;
 
@@ -10,6 +13,7 @@ import java.io.Serializable;
 public class Producto implements Serializable {
 
     @PrimaryKey
+    @SerializedName("NOEXISTES")
     private Integer id;
 
     @ColumnInfo(name = "title")
@@ -19,6 +23,7 @@ public class Producto implements Serializable {
     @ColumnInfo(name = "price")
     private String price;
 
+    @Ignore
     public Producto(String title, String thumbnail, String price) {
         this.title = title;
         this.thumbnail = thumbnail;
@@ -50,5 +55,13 @@ public class Producto implements Serializable {
 
     public void setPrice(String price) {
         this.price = price;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 }
