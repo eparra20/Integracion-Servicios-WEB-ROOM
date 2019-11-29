@@ -13,10 +13,7 @@ import java.io.Serializable;
 public class Producto implements Serializable {
 
     @PrimaryKey
-    //todo corregir.
-    @SerializedName("NOEXISTES")
     private Integer id;
-
     @ColumnInfo(name = "title")
     private String title;
     @ColumnInfo(name = "thumbnail")
